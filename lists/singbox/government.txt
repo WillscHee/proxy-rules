@@ -1,2 +1,0 @@
-domain-suffix:canada.ca
-domain-suffix:gc.ca

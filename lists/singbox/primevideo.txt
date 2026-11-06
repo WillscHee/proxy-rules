@@ -1,3 +1,0 @@
-domain-suffix:primevideo.com
-domain-suffix:aiv-cdn.net
-domain-suffix:pv-cdn.net

@@ -1,7 +1,0 @@
-domain-suffix:qq.com
-domain-suffix:wechat.com
-domain-suffix:tencent.com
-domain-suffix:qpic.cn
-domain-suffix:xiaohongshu.com
-domain-suffix:xhscdn.com
-domain-suffix:calicdn.com

@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
-"""Generate sing-box source-format rule sets.
+"""Generate sing-box JSON rule sets (format: "source", version 5).
 
-- lists/*.txt (bare domains, for Shadowrocket) -> lists/singbox/*.txt (domain-suffix:)
-- AWAvenue geosite file -> lists/awavenue-ads.txt
-  (bare -> domain-suffix:, full: -> domain:, keyword: -> domain-keyword:)
+New sing-box (>= main 2026-10) parses "source" rule sets as JSON:
+    {"version": 5, "rules": [{"type": "default", "domain_suffix": [...]}]}
 
-Hagezi is NOT generated here: sing-box subscribes the official
-wildcard/pro.plus.mini-onlydomains.txt directly (bare domain = exact match,
-which is the intended semantics for a wildcard DNS blocklist).
+Generates:
+- lists/*.txt (bare domains, for Shadowrocket) -> lists/singbox/*.json (domain_suffix)
+- AWAvenue geosite file -> lists/awavenue-ads.json
+  (bare -> domain_suffix, full: -> domain, keyword: -> domain_keyword)
+- Hagezi official wildcard mini -> lists/hagezi-pro-plus-mini.json (exact domain)
 
 Run: python3 make_lists.py   (then git add -A && git commit && git push)
 """
+import json
 import pathlib
 import urllib.request
 
@@ -19,31 +21,48 @@ L = ROOT / "lists"
 SB = L / "singbox"
 SB.mkdir(exist_ok=True)
 
+VERSION = 5
+
+
+def write_rs(path: pathlib.Path, rules):
+    path.write_text(json.dumps({"version": VERSION, "rules": rules}, separators=(",", ":")))
+    n = sum(len(v) for r in rules for v in r.values() if isinstance(v, list))
+    print(f"{path.relative_to(ROOT)}: {n} entries, {path.stat().st_size} bytes")
+
+
 CATS = ["apple", "google", "youtube", "netflix", "primevideo",
         "disney", "social", "finance", "government", "isp", "own"]
 
 for c in CATS:
     lines = [x.strip() for x in (L / f"{c}.txt").read_text().splitlines()
              if x.strip() and not x.startswith("#")]
-    out = [f"domain-suffix:{x}" for x in lines]
-    (SB / f"{c}.txt").write_text("\n".join(out) + "\n")
-    print(f"singbox/{c}.txt: {len(out)} entries")
+    write_rs(SB / f"{c}.json", [{"type": "default", "domain_suffix": lines}])
 
 AWA = ("https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/"
        "main/Filters/AWAvenue-Ads-Rule-Geosite-Only.Ads.txt")
 raw = urllib.request.urlopen(AWA, timeout=60).read().decode("utf-8", "replace")
-out = []
+suffix, exact, keyword = [], [], []
 for line in raw.splitlines():
     s = line.strip()
-    if not s:
+    if not s or s.startswith("#"):
         continue
-    if s.startswith("#"):
-        out.append(s)
-    elif s.startswith("full:"):
-        out.append("domain:" + s[5:])
+    if s.startswith("full:"):
+        exact.append(s[5:])
     elif s.startswith("keyword:"):
-        out.append("domain-keyword:" + s[8:])
+        keyword.append(s[8:])
     else:
-        out.append("domain-suffix:" + s)
-(L / "awavenue-ads.txt").write_text("\n".join(out) + "\n")
-print(f"awavenue-ads.txt: {len(out)} entries")
+        suffix.append(s)
+rules = []
+if suffix:
+    rules.append({"type": "default", "domain_suffix": suffix})
+if exact:
+    rules.append({"type": "default", "domain": exact})
+if keyword:
+    rules.append({"type": "default", "domain_keyword": keyword})
+write_rs(L / "awavenue-ads.json", rules)
+
+HAGEZI = ("https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/"
+          "wildcard/pro.plus.mini-onlydomains.txt")
+raw = urllib.request.urlopen(HAGEZI, timeout=120).read().decode("utf-8", "replace")
+domains = [x.strip() for x in raw.splitlines() if x.strip() and not x.startswith("#")]
+write_rs(L / "hagezi-pro-plus-mini.json", [{"type": "default", "domain": domains}])

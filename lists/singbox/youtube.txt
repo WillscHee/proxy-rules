@@ -1,4 +1,0 @@
-domain-suffix:youtube.com
-domain-suffix:youtu.be
-domain-suffix:googlevideo.com
-domain-suffix:ytimg.com
