@@ -1,0 +1,15 @@
+domain-suffix:rbc.com
+domain-suffix:rbcroyalbank.com
+domain-suffix:bmo.com
+domain-suffix:cibc.com
+domain-suffix:interac.ca
+domain-suffix:paypal.com
+domain-suffix:visa.com
+domain-suffix:mastercard.com
+domain-suffix:tdbank.com
+domain-suffix:royalbank.com
+domain-suffix:alipay.com
+domain-suffix:alipayobjects.com
+domain-suffix:alipayobjectsusercontent.com
+domain-suffix:cmbchina.com
+domain-suffix:cib.com.cn

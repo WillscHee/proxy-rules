@@ -1,0 +1,3 @@
+domain-suffix:rogers.com
+domain-suffix:bell.ca
+domain-suffix:fido.ca

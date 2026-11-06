@@ -1,0 +1,7 @@
+domain-suffix:apple.com
+domain-suffix:icloud.com
+domain-suffix:icloud-content.com
+domain-suffix:cdn-apple.com
+domain-suffix:apple-dns.net
+domain-suffix:mzstatic.com
+domain-suffix:me.com

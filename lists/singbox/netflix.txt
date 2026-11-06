@@ -1,0 +1,9 @@
+domain-suffix:netflix.com
+domain-suffix:netflix.net
+domain-suffix:nflximg.com
+domain-suffix:nflxvideo.net
+domain-suffix:nflxso.net
+domain-suffix:nflxext.com
+domain-suffix:formula1.com
+domain-suffix:akamaized.com
+domain-suffix:d3c233ee7u3317.cloudfront.net

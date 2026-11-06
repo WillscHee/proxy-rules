@@ -1,0 +1,5 @@
+domain-suffix:disneyplus.com
+domain-suffix:disney-plus.net
+domain-suffix:dssott.com
+domain-suffix:bamgrid.com
+domain-suffix:disneystreaming.com
