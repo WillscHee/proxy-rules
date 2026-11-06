@@ -1,0 +1,7 @@
+.apple.com
+.icloud.com
+.icloud-content.com
+.cdn-apple.com
+.apple-dns.net
+.mzstatic.com
+.me.com

@@ -1,0 +1,7 @@
+.qq.com
+.wechat.com
+.tencent.com
+.qpic.cn
+.xiaohongshu.com
+.xhscdn.com
+.calicdn.com
