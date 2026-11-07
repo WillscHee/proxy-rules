@@ -1,2 +1,5 @@
 .canada.ca
 .gc.ca
+.Ontario.ca
+.toronto.ca
+.on.ca

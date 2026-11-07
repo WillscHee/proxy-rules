@@ -5,3 +5,4 @@
 .apple-dns.net
 .mzstatic.com
 .me.com
+.apple-mapkit.com
