@@ -1,7 +1,16 @@
 qq.com
 wechat.com
-tencent.com
+weixin.com
+servicewechat.com
 qpic.cn
+qlogo.cn
+qqmail.com
+gtimg.cn
+gtimg.com
 xiaohongshu.com
+redbook1.com
+xhslink.com
 xhscdn.com
+fengkongcloud.com
 calicdn.com
+xhscdn.net
