@@ -11,5 +11,4 @@ royalbank.com
 alipay.com
 alipayobjects.com
 alipayobjectsusercontent.com
-cmbchina.com
-cib.com.cn
+tenpay.com
