@@ -6,3 +6,6 @@ ggpht.com
 1e100.net
 goo.gl
 g.co
+googlecode.com
+googlehosted.com
+googleoptimize.com
