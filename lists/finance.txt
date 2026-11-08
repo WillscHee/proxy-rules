@@ -77,7 +77,8 @@ alipayobjectsusercontent.com
 alipay.cn
 alipay.com.cn
 tenpay.com
-wx.qq.com
+wechatpay.cn
+wechatpay.com
 akamaihd.net
 akamaiedge.net
 edgekey.net
