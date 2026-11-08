@@ -1,7 +1,9 @@
 qq.com
 wechat.com
 weixin.com
+wx.qq.com
 servicewechat.com
+weixinbridge.com
 qpic.cn
 qlogo.cn
 qqmail.com
@@ -14,3 +16,4 @@ xhscdn.com
 fengkongcloud.com
 calicdn.com
 xhscdn.net
+xiaohongshu.net
