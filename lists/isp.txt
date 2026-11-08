@@ -1,3 +1,5 @@
 rogers.com
 bell.ca
 fido.ca
+wenhuiqi.com
+localhost
