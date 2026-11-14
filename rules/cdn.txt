@@ -1,0 +1,16 @@
+cloudflare.com
+*.cloudflare.com
+akamaihd.net
+*.akamaihd.net
+akamaiedge.net
+*.akamaiedge.net
+edgekey.net
+*.edgekey.net
+cloudfront.net
+*.cloudfront.net
+fastly.net
+*.fastly.net
+*.apple.com.edgesuite.net
+*.akamai.net
+*.fastly-edge.com
+*.akamaized.net
