@@ -1,4 +1,8 @@
 openai.com
+*.openai.com
 chatgpt.com
+*.chatgpt.com
 oaistatic.com
+*.oaistatic.com
 oaiusercontent.com
+*.oaiusercontent.com
