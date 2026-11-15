@@ -1,4 +1,10 @@
 payload:
+  - '+.huggingface.co'
+  - '+.hf.co'
+  - '+.ollama.com'
+  - '+.ollama.ai'
+  - '+.github.com'
+  - '+.githubusercontent.com'
   - +.iconfig.me
   - +.91porn.com
   - +.sex8.cc
