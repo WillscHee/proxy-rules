@@ -11,12 +11,6 @@ payload:
   - +.bell.ca
   - +.fido.ca
 
-  # ─── 个人与商业域名 ────────────────────────────────────
-  - +.dmqc.ca
-  - +.wenhuiqi.com
-  - +.dmqcapital.com
-  - +.zohocloud.ca
-
   # ─── 餐饮与风控验证 (McDonald's / PerimeterX) ───────────
   - +.mcdonalds.com
   - +.mcdonalds.ca
