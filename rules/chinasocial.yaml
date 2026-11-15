@@ -1,0 +1,28 @@
+payload:
+  # ─── 腾讯 / 微信系 ─────────────────────────────────────
+  - +.qq.com
+  - +.wechat.com
+  - +.weixin.com
+  - +.weixin.cn
+  - +.servicewechat.com
+  - +.qpic.cn
+  - +.qlogo.cn
+  - +.qqmail.com
+  - +.gtimg.cn
+  - +.gtimg.com
+  - +.tencent.com
+  - +.tencent-cloud.net
+  - +.myqcloud.com
+  - +.wx.qq.com
+  - +.weixinbridge.com
+
+  # ─── 小红书系 ──────────────────────────────────────────
+  - +.xiaohongshu.com
+  - +.redbook1.com
+  - +.xhslink.com
+  - +.xhscdn.com
+  - +.xhscdn.net
+  - +.fengkongcloud.com
+  - +.calicdn.com
+  - +.xhs-cdn.com
+  - +.xiaohongshu.net
