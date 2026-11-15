@@ -1,10 +1,9 @@
 payload:
-  - '+.huggingface.co'
-  - '+.hf.co'
-  - '+.ollama.com'
-  - '+.ollama.ai'
-  - '+.github.com'
-  - '+.githubusercontent.com'
+ # ─── AI Models & Large Downloads ───────────────────────
+  - +.huggingface.co
+  - +.hf.co
+  - +.ollama.com
+  - +.ollama.ai
   - +.iconfig.me
   - +.91porn.com
   - +.sex8.cc
