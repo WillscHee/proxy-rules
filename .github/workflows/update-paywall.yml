@@ -1,0 +1,38 @@
+name: update-paywall-rules
+
+on:
+  schedule:
+    # 每周两次：周一、周四 00:00 UTC（北京时间 08:00）
+    - cron: "0 0 * * 1,4"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch latest bypass-paywalls-clean-filters
+        run: |
+          curl -sSL --fail --retry 3 --max-time 60 \
+            "https://gitflic.ru/project/magnolia1234/bypass-paywalls-clean-filters/blob/raw?file=bpc-paywall-filter.txt" \
+            -o /tmp/bpc-paywall-filter.txt
+          wc -l /tmp/bpc-paywall-filter.txt
+
+      - name: Filter list into rules/paywall.txt
+        run: python3 scripts/update_paywall.py /tmp/bpc-paywall-filter.txt rules/paywall.txt
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet rules/paywall.txt; then
+            git add rules/paywall.txt
+            git commit -m "chore: update paywall rules from bypass-paywalls-clean-filters"
+            git push
+          else
+            echo "No changes detected."
+          fi
