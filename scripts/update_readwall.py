@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Sync bypass-paywalls-clean-filters list into the repo, removing excluded lines.
 
-Usage: update_paywall.py <source-list.txt> <destination.txt>
+Usage: update_readwall.py <source-list.txt> <destination.txt>
 """
 import sys
 
