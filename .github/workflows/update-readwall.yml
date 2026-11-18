@@ -29,8 +29,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if ! git diff --quiet rules/paywall.txt; then
-            git add rules/paywall.txt
+          if ! git diff --quiet rules/readwall.txt; then
+            git add rules/readwall.txt
             git commit -m "chore: update readwall rules"
             git push
           else
