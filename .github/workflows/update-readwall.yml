@@ -2,7 +2,7 @@ Reaname: update-readwall-rules
 
 on:
   schedule:
-    # 每周两次：周一、周四 00:00 UTC（北京时间 08:00）
+    # 每周两次：周一、周四 00:00 UTC
     - cron: "0 0 * * 1,4"
   workflow_dispatch: {}
 
@@ -23,7 +23,7 @@ jobs:
           wc -l /tmp/bpc-paywall-filter.txt
 
       - name: Filter list into rules/readwall.txt
-        run: python3 scripts/update_paywall.py /tmp/bpc-paywall-filter.txt rules/readwall.txt
+        run: python3 scripts/update_readwall.py /tmp/bpc-paywall-filter.txt rules/readwall.txt
 
       - name: Commit if changed
         run: |
