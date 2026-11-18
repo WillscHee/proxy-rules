@@ -1,4 +1,4 @@
-Rename: update-paywall-rules
+Rename: update-readwall-rules
 
 on:
   schedule:
