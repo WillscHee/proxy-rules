@@ -1,4 +1,4 @@
-name: update-paywall-rules
+Reaname: update-paywall-rules
 
 on:
   schedule:
@@ -22,8 +22,8 @@ jobs:
             -o /tmp/bpc-paywall-filter.txt
           wc -l /tmp/bpc-paywall-filter.txt
 
-      - name: Filter list into rules/paywall.txt
-        run: python3 scripts/update_paywall.py /tmp/bpc-paywall-filter.txt rules/paywall.txt
+      - name: Filter list into rules/readwall.txt
+        run: python3 scripts/update_paywall.py /tmp/bpc-paywall-filter.txt rules/readwall.txt
 
       - name: Commit if changed
         run: |
@@ -31,7 +31,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if ! git diff --quiet rules/paywall.txt; then
             git add rules/paywall.txt
-            git commit -m "chore: update paywall rules from bypass-paywalls-clean-filters"
+            git commit -m "chore: update readwall rules"
             git push
           else
             echo "No changes detected."
