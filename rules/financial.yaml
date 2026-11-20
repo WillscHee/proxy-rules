@@ -1,5 +1,5 @@
 payload:
-  # ─── 加拿大银行与支付 (RBC / Scotiabank / CIBC / TD / BMO / Interac) ───
+  # ─── (RBC / Scotiabank / CIBC / TD / BMO / Interac) ───
   - +.rbcroyalbank.com
   - +.royalbank.com
   - +.rbc.net
@@ -27,7 +27,7 @@ payload:
   - +.interac.ca
   - +.interac.online
 
-  # ─── 美国与国际银行 (Chase / BoA / Citi / Wells Fargo / PNC / HSBC) ───
+  # ───  (Chase / BoA / Citi / Wells Fargo / PNC / HSBC) ───
   - +.chase.com
   - +.jpmorgan.com
   - +.jpmorganchase.com
@@ -45,7 +45,7 @@ payload:
   - +.hsbc.com.cn
   - +.hsbc.com.hk
 
-  # ─── 国际支付与卡组织 (PayPal / Visa / Mastercard / Amex) ───
+  # ───  (PayPal / Visa / Mastercard / Amex) ───
   - +.paypal.com
   - +.paypalobjects.com
   - +.paypal-mktg.com
@@ -57,7 +57,7 @@ payload:
   - +.americanexpress.com
   - +.americanexpress.ca
 
-  # ─── 中国大陆及香港银行 ────────────────────────────────
+  #  ────────────────────────────────
   - +.icbc.com.cn
   - +.icbc.com
   - +.icbc.com.hk
@@ -86,7 +86,7 @@ payload:
   - +.spdb.com.cn
   - +.bankofbeijing.com.cn
 
-  # ─── 中国支付与清算 (Alipay / WeChat Pay / UnionPay) ───
+  # ───  (Alipay / WeChat Pay / UnionPay) ───
   - +.alipay.com
   - +.alipayobjects.com
   - +.alipayobjectsusercontent.com
