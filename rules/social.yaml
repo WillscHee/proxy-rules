@@ -1,5 +1,4 @@
 payload:
-  # ─── 腾讯 / 微信系 ─────────────────────────────────────
   - +.qq.com
   - +.wechat.com
   - +.weixin.com
@@ -16,7 +15,6 @@ payload:
   - +.wx.qq.com
   - +.weixinbridge.com
 
-  # ─── 小红书系 ──────────────────────────────────────────
   - +.xiaohongshu.com
   - +.redbook1.com
   - +.xhslink.com
