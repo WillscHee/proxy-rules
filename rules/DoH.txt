@@ -1,9 +1,8 @@
 # Title: DoH Bypass Whitelist (HaGeZi, minus Apple Private Relay)
 # Description: Domains that use encrypted DNS (DoH/DoT/DoQ). Whitelist these to prevent DNS bypass.
 # Source: https://hagezi-mirror.dnsbunker.org/wildcard/doh-onlydomains.txt
-# Modified: Removed Apple Private Relay related entries
-# Last updated: 2026-11-26
-# Number of entries: 3557
+# Auto-updated by GitHub Actions
+# Number of entries: 3551
 #
 
 003153.xyz
@@ -1000,7 +999,6 @@ dns.complianceauditores.com.br
 dns.connect.fail
 dns.consoro.eu
 dns.containerpi.com
-dns.controld.com
 dns.cooluc.com
 dns.corefusion.xyz
 dns.cryptomize.com
@@ -1969,7 +1967,6 @@ doh.centraleu.pi-dns.com
 doh.cippapp.com
 doh.cnetwork.cloud
 doh.conectarjdp.com
-doh.controld.com
 doh.cornes.me
 doh.corpa.me
 doh.cox.net
@@ -2241,7 +2238,6 @@ fra02.dnscry.pt
 frank-web.dedyn.io
 fredic.us
 free.shecan.ir
-freedns.controld.com
 freedom.mydns.network
 freemnt.hpitto.com
 freewhitelists.privatedns.org
@@ -2654,9 +2650,6 @@ mak-na.ru
 malanser.ru
 man01.dnscry.pt
 maqgie.xyz
-mask-canary.icloud.com
-mask-h2.icloud.com
-mask.icloud.com
 mastergad.me
 masters-of-cloud.de
 math.netlab.my.id

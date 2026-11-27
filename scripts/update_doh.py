@@ -8,6 +8,18 @@ import sys
 # Patterns to exclude (Apple Private Relay related)
 EXCLUDE_PATTERNS = ["apple", "privaterelay", "appleid", "aaplimg", "applewebkit"]
 
+# Exact domains to exclude
+EXCLUDE_DOMAINS = {
+    # Apple Private Relay
+    "mask.icloud.com",
+    "mask-h2.icloud.com",
+    "mask-canary.icloud.com",
+    # ControlD (can't block own service)
+    "dns.controld.com",
+    "doh.controld.com",
+    "freedns.controld.com",
+}
+
 
 def extract_domains(lines):
     """Extract clean domains, excluding Apple Private Relay entries."""
@@ -19,6 +31,9 @@ def extract_domains(lines):
             continue
         # Skip Apple Private Relay related entries
         if any(p in line.lower() for p in EXCLUDE_PATTERNS):
+            continue
+        # Skip exact domain exclusions
+        if line.lower() in EXCLUDE_DOMAINS:
             continue
         domains.add(line.lower())
     return sorted(domains)
