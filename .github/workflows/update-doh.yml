@@ -23,14 +23,14 @@ jobs:
           wc -l /tmp/doh-onlydomains.txt
 
       - name: Extract domains into rules/DoH.txt
-        run: python3 scripts/update_doh.py /tmp/doh-onlydomains.txt rules/DoH.txt
+        run: python3 scripts/update_doh.py /tmp/doh-onlydomains.txt txt/DoH.txt
 
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if ! git diff --quiet rules/DoH.txt; then
-            git add rules/DoH.txt
+          if ! git diff --quiet txt/DoH.txt; then
+            git add txt/DoH.txt
             git commit -m "chore: update DoH whitelist"
             git push
           else
