@@ -1,0 +1,46 @@
+payload:
+  # ─── Akamai ────────────────────────────────────────────
+  - +.akamaihd.net
+  - +.akamaiedge.net
+  - +.edgekey.net
+  - +.akamai.net
+  - +.akamaized.net
+  - +.edgesuite.net
+  - +.srip.net
+  - +.akamaitechnologies.com
+
+  # ─── AWS CloudFront / S3 ───────────────────────────────
+  - +.cloudfront.net
+  - +.amazonaws.com
+
+  # ─── Fastly ────────────────────────────────────────────
+  - +.fastly.net
+  - +.fastlylb.net
+  - +.fsly.net
+
+  # ─── Cloudflare ────────────────────────────────────────
+  - +.cloudflare.net
+  - +.cloudflare-ipfs.com
+  - +.cloudflareinsights.com
+  - +.cdnjs.cloudflare.com
+  - +.pages.dev
+  - +.workers.dev
+
+  # ─── Microsoft Azure / Google Cloud CDN ───────────────
+  - +.azureedge.net
+  - +.msecnd.net
+  - +.vo.msecnd.net
+  - +.googleapis.com
+  - +.gstatic.com
+  - +.googleusercontent.com
+
+  # ─── 开源与通用内容分发 (jsDelivr / unpkg / Bunny / Verizon) ───
+  - +.jsdelivr.net
+  - +.unpkg.com
+  - +.bootstrapcdn.com
+  - +.bunnycdn.com
+  - +.b-cdn.net
+  - +.edgecastcdn.net
+  - +.hwcdn.net
+  - +.llnwd.net
+  - +.footprint.net
