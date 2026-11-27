@@ -23,14 +23,14 @@ jobs:
           wc -l /tmp/bpc-paywall-filter.txt
 
       - name: Filter list into rules/readwall.txt
-        run: python3 scripts/update_readwall.py /tmp/bpc-paywall-filter.txt rules/readwall.txt
+        run: python3 scripts/update_readwall.py /tmp/bpc-paywall-filter.txt txt/readwall.txt
 
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if ! git diff --quiet rules/readwall.txt; then
-            git add rules/readwall.txt
+          if ! git diff --quiet txt/readwall.txt; then
+            git add txt/readwall.txt
             git commit -m "chore: update readwall rules"
             git push
           else
