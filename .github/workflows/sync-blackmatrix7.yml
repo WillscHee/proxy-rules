@@ -17,7 +17,7 @@ jobs:
       - name: Sync Shadowrocket lists from blackmatrix7
         run: |
           BASE="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket"
-          LISTS="Apple Google YouTube Netflix PrimeVideo Disney Twitter OpenAI Claude Akamai China Cloudflare iCloudPrivateRelay Microsoft"
+          LISTS="Apple Google YouTube Netflix PrimeVideo Disney Twitter OpenAI Claude Akamai Cloudflare iCloudPrivateRelay Microsoft"
           CHANGED=0
 
           for name in $LISTS; do
