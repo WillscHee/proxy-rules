@@ -1,0 +1,48 @@
+run-name: sync-blackmatrix7-rule-lists
+
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sync Shadowrocket lists from blackmatrix7
+        run: |
+          BASE="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket"
+          LISTS="Apple Google YouTube Netflix PrimeVideo Disney Twitter OpenAI Claude Akamai China Cloudflare iCloudPrivateRelay Microsoft"
+          CHANGED=0
+
+          for name in $LISTS; do
+            URL="${BASE}/${name}/${name}.list"
+            TARGET="shadowrocket/${name}.list"
+
+            if curl -sSL --fail --retry 3 --max-time 60 "$URL" -o "/tmp/${name}.list"; then
+              if ! diff -q "/tmp/${name}.list" "$TARGET" > /dev/null 2>&1; then
+                cp "/tmp/${name}.list" "$TARGET"
+                echo "updated: ${name}.list ($(wc -l < "$TARGET") lines)"
+                CHANGED=1
+              else
+                echo "unchanged: ${name}.list"
+              fi
+            else
+              echo "WARN: failed to fetch ${name}.list, skipping"
+            fi
+          done
+
+          if [ "$CHANGED" -eq 1 ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add shadowrocket/*.list
+            git commit -m "chore: sync Shadowrocket lists from blackmatrix7"
+            git push
+          else
+            echo "No changes detected."
+          fi
