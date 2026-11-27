@@ -23,14 +23,14 @@ jobs:
           wc -l /tmp/adguard-sdns-filter.txt
 
       - name: Extract domains into rules/Adguard-dns-filters-onlydomains.txt
-        run: python3 scripts/update_adguard_dns.py /tmp/adguard-sdns-filter.txt rules/Adguard-dns-filters-onlydomains.txt
+        run: run: python3 scripts/update_adguard_dns.py /tmp/adguard-sdns-filter.txt txt/Adguard-dns-filters-onlydomains.txt
 
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if ! git diff --quiet rules/Adguard-dns-filters-onlydomains.txt; then
-            git add rules/Adguard-dns-filters-onlydomains.txt
+          if ! git diff --quiet txt/Adguard-dns-filters-onlydomains.txt; then
+            git add txt/Adguard-dns-filters-onlydomains.txt
             git commit -m "chore: update AdGuard DNS filters domains"
             git push
           else
