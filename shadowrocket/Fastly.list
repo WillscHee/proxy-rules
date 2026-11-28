@@ -11,8 +11,11 @@ DOMAIN-SUFFIX,fastly.com
 DOMAIN-SUFFIX,fastly.io
 DOMAIN-SUFFIX,fastly.net
 DOMAIN-SUFFIX,fastlycdn.com
-DOMAIN-SUFFIX,fastlylb.com
+DOMAIN-SUFFIX,fastlylabs.com
 DOMAIN-SUFFIX,fastlylb.net
 DOMAIN-SUFFIX,fastlycdn.net
 DOMAIN-SUFFIX,edgesuite.net
-DOMAIN-SUFFIX,akamaiedge.net
+DOMAIN-SUFFIX,fastlydns.net
+DOMAIN-SUFFIX,fastly-edge.com
+DOMAIN-SUFFIX,fastly-insights.com
+DOMAIN-SUFFIX,fastly-terrarium.com
