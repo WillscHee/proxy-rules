@@ -54,6 +54,7 @@ quad9.net
 security-filter-dns.cleanbrowsing.org
 security.cloudflare-dns.com
 sm2.doh.pub
+dns.xiaohongshu.com
 ss.microbaidu.com
 udns.weixin.qq.com
 unfiltered.adguard-dns.com
