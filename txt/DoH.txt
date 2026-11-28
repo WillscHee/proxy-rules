@@ -1,4 +1,4 @@
-# Title: DoH Bypass Blocklist - Public DNS & App HTTPDNS
+# Title: DoH Blocklist - Public DNS & App HTTPDNS
 # Description: Public DNS and app-hardcoded HTTPDNS endpoints to block DNS bypass.
 # Filtered: CN/NA public DNS + major app HTTPDNS endpoints
 # Number of entries: 53
