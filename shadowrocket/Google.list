@@ -2,12 +2,13 @@
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2026-05-12 02:38:11
+# CLEANED: 2026-11-28 (removed dead domains, re-verified)
 # DOMAIN: 1
 # DOMAIN-KEYWORD: 5
-# DOMAIN-SUFFIX: 684
+# DOMAIN-SUFFIX: 401
 # IP-CIDR: 5
 # USER-AGENT: 3
-# TOTAL: 698
+# TOTAL: 412
 DOMAIN,voice.telephony.goog
 DOMAIN-SUFFIX,0emm.com
 DOMAIN-SUFFIX,1e100.net
@@ -42,7 +43,6 @@ DOMAIN-SUFFIX,apigee.com
 DOMAIN-SUFFIX,app-analytics-services.com
 DOMAIN-SUFFIX,app-measurement-cn.com
 DOMAIN-SUFFIX,app-measurement.com
-DOMAIN-SUFFIX,app-measurement.net
 DOMAIN-SUFFIX,appbridge.ca
 DOMAIN-SUFFIX,appbridge.io
 DOMAIN-SUFFIX,appbridge.it
@@ -78,16 +78,13 @@ DOMAIN-SUFFIX,bumptunes.com
 DOMAIN-SUFFIX,c.gle
 DOMAIN-SUFFIX,campuslondon.com
 DOMAIN-SUFFIX,capitalg.com
-DOMAIN-SUFFIX,certificate-transparency.dev
 DOMAIN-SUFFIX,certificate-transparency.org
 DOMAIN-SUFFIX,charlestonroadregistry.com
-DOMAIN-SUFFIX,chat.gle
 DOMAIN-SUFFIX,chrome.com
 DOMAIN-SUFFIX,chromebook.com
 DOMAIN-SUFFIX,chromecast.com
 DOMAIN-SUFFIX,chromeexperiments.com
 DOMAIN-SUFFIX,chromeos.dev
-DOMAIN-SUFFIX,chromercise.com
 DOMAIN-SUFFIX,chromestatus.com
 DOMAIN-SUFFIX,chromium.org
 DOMAIN-SUFFIX,chronicle.security
@@ -153,7 +150,6 @@ DOMAIN-SUFFIX,g.co
 DOMAIN-SUFFIX,g.dev
 DOMAIN-SUFFIX,g.page
 DOMAIN-SUFFIX,gateway.dev
-DOMAIN-SUFFIX,gcp.gvt2.com
 DOMAIN-SUFFIX,gcr.io
 DOMAIN-SUFFIX,gerritcodereview.com
 DOMAIN-SUFFIX,get.app
@@ -252,7 +248,6 @@ DOMAIN-SUFFIX,gstatic.com
 DOMAIN-SUFFIX,gstaticcnapps.cn
 DOMAIN-SUFFIX,gsuite.com
 DOMAIN-SUFFIX,gv.com
-DOMAIN-SUFFIX,gvt0.com
 DOMAIN-SUFFIX,gvt1-cn.com
 DOMAIN-SUFFIX,gvt2-cn.com
 DOMAIN-SUFFIX,gvt3.com
@@ -380,7 +375,6 @@ DOMAIN-SUFFIX,thinkwithgoogle.com
 DOMAIN-SUFFIX,tiltbrush.com
 DOMAIN-SUFFIX,txcloud.net
 DOMAIN-SUFFIX,txvia.com
-DOMAIN-SUFFIX,unfiltered.news
 DOMAIN-SUFFIX,urchin.com
 DOMAIN-SUFFIX,useplannr.com
 DOMAIN-SUFFIX,usvimosquito.com
